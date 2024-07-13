@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator_by Bhavik</title>
+   
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+    <link rel="icon" href="img/meme icon.png">
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="videoBackground">
+            <source src="memes.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="container">
+        <h1> The Meme Factory</h1>
+        <p style="font-family:'Lucida Sans';">The ultimate destination for the meme lovers!</p>
+        <div class="form">
+            <div class="template-section">
+                <label for="template"></label>
+                <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select-trigger">
+                            <span>Choose a template</span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-section">
+                <div class="label-input">
+                    <div class="input-container">
+                        <input type="text" id="topText" placeholder="Enter top text">
+                    </div>
+                    <div class="input-container">
+                        <!-- the Api is not allowing to change fonts and styles -->
+                        <select id="topTextStyle">
+                            <option value="default-1">Default</option>
+                            <option value="bold">Bold</option>
+                            <option value="italic">Italic</option>
+                            <option value="underline">Underline</option>
+                            
+                        </select>
+                        <select id="topFontStyle">
+                            <!-- the Api is not allowing to change fonts and styles -->
+                            <option value="Arial, sans-serif">Arial</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <!-- Add more standard fonts here -->
+                            <option value="https://fonts.googleapis.com/css2?family=Roboto&display=swap">Roboto (Custom Google Font)</option>
+                            
+                        </select>
+                    </div>
+                </div>
+                <div class="label-input">
+                    <div class="input-container">
+                        <input type="text" id="bottomText" placeholder="Enter bottom text">
+                    </div>
+                    <div class="input-container">
+                        <select id="bottomTextStyle">
+                            <option value="default-2">Default</option>
+                            <option value="bold">Bold</option>
+                            <option value="italic">Italic</option>
+                            <option value="underline">Underline</option>
+                           
+                        </select>
+                        <select id="bottomFontStyle">
+                            <option value="Arial, sans-serif">Arial</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <!-- Add more standard fonts here -->
+                            <option value="https://example.com/my-custom-font.ttf">Custom Font (Direct URL)</option>
+                            
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <!-- this share options will work if we have a proper database mangement-->
+                <button id="generateBtn">Generate Meme</button>
+                <button id="downloadBtn">Download</button> 
+                <button id="shareBtn">Share</button>
+                <div class="share-popup" style="display: none;">
+                    <div class="share-icons">
+                        <a href="#" id="whatsappShare"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" id="facebookShare"><i class="fab fa-facebook"></i></a>
+                        <a href="#" id="instagramShare"><i class="fab fa-instagram"></i></a>
+                        <a href="#" id="snapchatShare"><i class="fab fa-snapchat"></i></a>
+                        <a href="#" id="linkedinShare"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" id="twitterShare"><i class="fab fa-twitter"></i></a>
+                        <a href="#" id="hangoutsShare"><i class="fab fa-google-plus"></i></a>
+                        <a href="#" id="copyLink"><i class="fas fa-copy"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="meme">
+            <img id="memeImg" src="" alt="Generated Meme">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

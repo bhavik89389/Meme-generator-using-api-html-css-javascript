@@ -1,0 +1,226 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+    position: relative;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    overflow: hidden;
+}
+
+#videoBackground {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.6); 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%; 
+    max-width: 1000px; 
+    backdrop-filter: blur(10px); 
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%; 
+    }
+}
+
+.form {
+    margin-bottom: 20px;
+}
+
+.custom-select-wrapper {
+    margin-bottom: 20px;
+}
+
+.text-section {
+    margin-bottom: 20px;
+}
+
+.label-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.label-input .input-container {
+    flex: 1;
+}
+
+.input-container input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input-container select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+    width: 250px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.button-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: calc(30% - 5px);
+    box-sizing: border-box;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
+
+.meme {
+    margin-top: 20px;
+}
+
+#memeImg {
+    max-width: 100%;
+    height: auto; 
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-height: 400px; 
+}
+
+.custom-select-wrapper {
+    position: relative;
+    user-select: none;
+}
+
+.custom-select {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-select-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.custom-select-trigger span {
+    display: inline-block;
+}
+
+.custom-select-trigger .arrow {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000;
+}
+
+.custom-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.custom-options .custom-option {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.custom-options .custom-option:hover {
+    background: #f0f0f0;
+}
+
+.custom-options .custom-option img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.share-popup {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 20;
+}
+
+.share-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.share-icons a {
+    color: #007bff;
+    font-size: 24px;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.share-icons a:hover {
+    color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        flex-wrap: wrap;
+    }
+
+    .button-container button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
